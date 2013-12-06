@@ -1,0 +1,28 @@
+<div class="container">
+	<!DOCTYPE html>
+	<html>
+	<head>
+	  <title>DansbuzzApp</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+
+		<p>
+	<div style="float: right;">		
+		<a href="<%= new_user_session_path %>">Log in</a>
+		<a href="<%= new_user_registration_path %>">Sign Up</a>
+	</div>
+		</p>
+		<img src="<%= image_path("DansBuzzLogo.png") %>">
+		<ul class="nav nav-pills">
+			<li><a href="<%= root_path %>">Home</a></li>
+			<li><a href="<%= new_event_path %>">Submit Event</a></li>
+			<li><a href="<%= new_user_registration_path %>">Sign Up</a>
+		</ul>
+	<%= yield %>
+
+	</body>
+	</html>
+</div>
